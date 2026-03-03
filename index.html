@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forsaken — Modern Retro Gaming Frontend</title>
+    <meta name="description" content="Forsaken is a free, open-source emulator frontend for 65+ retro gaming platforms. Beautiful UI, gamepad support, ROM management, and cross-platform compatibility.">
+    <meta name="keywords" content="retro gaming, emulator frontend, ROM manager, Flutter, open source, gamepad, multi-platform, NES, SNES, PlayStation, emulation, cross-platform">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container container">
+            <a href="#" class="logo">FORSAKEN</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#features">Features</a>
+                <a href="#platforms">Platforms</a>
+                <a href="#download">Download</a>
+                <a href="https://github.com/ForsakenStation/ForsakenStation" target="_blank">GitHub</a>
+                <a href="#download" class="cta-btn small-btn mobile-cta">Download</a>
+            </div>
+            <a href="#download" class="cta-btn small-btn desktop-cta">Download</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-glow" data-parallax="0.1"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title" data-animate="fade-up">Your Retro Games.<br><span class="text-gradient">One Beautiful Frontend.</span></h1>
+                <p class="hero-subtitle" data-animate="fade-up" style="transition-delay: 100ms;">Forsaken is a modern, open-source emulator frontend that brings your entire retro gaming library together — with stunning visuals, gamepad support, and cross-platform power.</p>
+                <div class="hero-buttons" data-animate="fade-up" style="transition-delay: 200ms;">
+                    <a href="https://github.com/ForsakenStation/ForsakenStation/releases" class="btn btn-primary" target="_blank">Download for Free</a>
+                    <a href="https://github.com/ForsakenStation/ForsakenStation" class="btn btn-outline" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="scroll-indicator" data-animate="fade-up" style="transition-delay: 400ms;">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- App Preview Section -->
+        <section class="app-preview section-padding" id="preview">
+            <div class="container">
+                <div class="mockup-frame" data-animate="zoom-in" data-parallax="0.05">
+                    <div class="placeholder-img gradient-bg-app">
+                        <div class="abstract-ui">
+                            <div class="ui-sidebar"></div>
+                            <div class="ui-main">
+                                <div class="ui-header"></div>
+                                <div class="ui-grid">
+                                    <div class="ui-card"></div><div class="ui-card"></div><div class="ui-card"></div>
+                                    <div class="ui-card"></div><div class="ui-card"></div><div class="ui-card"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="ph-text">App Preview</h3>
+                    </div>
+                </div>
+                <div class="preview-thumbnails">
+                    <div class="thumbnail" data-animate="fade-up">
+                        <div class="thumb-ph">Grid View</div>
+                    </div>
+                    <div class="thumbnail" data-animate="fade-up" style="transition-delay: 100ms;">
+                        <div class="thumb-ph">List View</div>
+                    </div>
+                    <div class="thumbnail" data-animate="fade-up" style="transition-delay: 200ms;">
+                        <div class="thumb-ph">Carousel View</div>
+                    </div>
+                </div>
+                <p class="text-center mt-4 caption" data-animate="fade-up">Three beautiful ways to browse your library</p>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="features section-padding" id="features">
+            <div class="container">
+                <h2 class="section-title text-center" data-animate="fade-up">Everything You Need</h2>
+                <div class="features-grid">
+                    <div class="feature-card glass-card" data-animate="fade-up">
+                        <div class="feature-icon glow-icon">📱</div>
+                        <h3>Play Anywhere</h3>
+                        <p>Runs natively on Android, iOS, Linux, Windows, macOS, and even in your browser. Your library follows you everywhere.</p>
+                    </div>
+                    <div class="feature-card glass-card" data-animate="fade-up" style="transition-delay: 50ms;">
+                        <div class="feature-icon glow-icon">🎮</div>
+                        <h3>Every Console You Remember</h3>
+                        <p>From NES to PlayStation, Game Boy to Dreamcast — browse and launch games across 65+ retro gaming platforms with 159 emulator configurations.</p>
+                    </div>
+                    <div class="feature-card glass-card" data-animate="fade-up" style="transition-delay: 100ms;">
+                        <div class="feature-icon glow-icon">✨</div>
+                        <h3>A Feast for the Eyes</h3>
+                        <p>Three beautiful view modes — Grid, List, and a cinematic 3D Carousel. Rich media display with box art, screenshots, videos, fan art, and more.</p>
+                    </div>
+                    <div class="feature-card glass-card" data-animate="fade-up" style="transition-delay: 150ms;">
+                        <div class="feature-icon glow-icon">🕹️</div>
+                        <h3>Designed for Controllers</h3>
+                        <p>Full gamepad navigation with button indicators, plus comprehensive keyboard shortcuts for power users. Navigate your library without ever touching a mouse.</p>
+                    </div>
+                    <div class="feature-card glass-card" data-animate="fade-up" style="transition-delay: 200ms;">
+                        <div class="feature-icon glow-icon">📁</div>
+                        <h3>Download, Play, Organize</h3>
+                        <p>Built-in download manager with queue and progress tracking. Automatic BIOS detection and download. Temporary and permanent storage with smart cleanup.</p>
+                    </div>
+                    <div class="feature-card glass-card" data-animate="fade-up" style="transition-delay: 250ms;">
+                        <div class="feature-icon glow-icon">🌍</div>
+                        <h3>Free, Open, Global</h3>
+                        <p>MIT licensed, community-driven, and translated into 14 languages. Forsaken belongs to everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platforms Showcase -->
+        <section class="platforms section-padding" id="platforms">
+            <h2 class="section-title text-center mb-4" data-animate="fade-up">65+ Gaming Platforms</h2>
+            
+            <div class="marquee-container" data-animate="fade-in">
+                <div class="marquee">
+                    <span>Nintendo NES</span>
+                    <span>Sony PlayStation</span>
+                    <span>Sega Genesis</span>
+                    <span>Microsoft Xbox</span>
+                    <span>Arcade/MAME</span>
+                    <span>Game Boy Advance</span>
+                    <span>Dreamcast</span>
+                    <span>Amiga</span>
+                    <span>Nintendo 64</span>
+                    
+                    <span>Nintendo NES</span>
+                    <span>Sony PlayStation</span>
+                    <span>Sega Genesis</span>
+                    <span>Microsoft Xbox</span>
+                    <span>Arcade/MAME</span>
+                    <span>Game Boy Advance</span>
+                    <span>Dreamcast</span>
+                    <span>Amiga</span>
+                    <span>Nintendo 64</span>
+                </div>
+            </div>
+            
+            <div class="container platform-groups mt-4" data-animate="fade-up">
+                <div class="pill-group">
+                    <span class="pill outline-glow">Nintendo</span>
+                    <span class="pill outline-glow">Sony</span>
+                    <span class="pill outline-glow">Sega</span>
+                    <span class="pill outline-glow">Microsoft</span>
+                    <span class="pill outline-glow">Atari</span>
+                    <span class="pill outline-glow">Commodore</span>
+                    <span class="pill outline-glow">Arcade</span>
+                </div>
+                <div class="text-center mt-4 stat-ticker" data-animate="fade-up">
+                    <span class="counter" data-target="65">0</span>+ Platforms &nbsp;&middot;&nbsp; 
+                    <span class="counter" data-target="159">0</span> Emulators &nbsp;&middot;&nbsp; 
+                    <span class="counter" data-target="240000">0</span>+ ROMs
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="statistics section-padding dark-surface">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-animate="fade-up">
+                        <div class="stat-icon">🕹️</div>
+                        <div class="stat-number"><span class="counter" data-target="65">0</span>+</div>
+                        <div class="stat-label">Consoles</div>
+                    </div>
+                    <div class="stat-item" data-animate="fade-up" style="transition-delay: 100ms;">
+                        <div class="stat-icon">💾</div>
+                        <div class="stat-number"><span class="counter" data-target="240">0</span>K+</div>
+                        <div class="stat-label">ROMs</div>
+                    </div>
+                    <div class="stat-item" data-animate="fade-up" style="transition-delay: 200ms;">
+                        <div class="stat-icon">🌐</div>
+                        <div class="stat-number"><span class="counter" data-target="14">0</span></div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                    <div class="stat-item" data-animate="fade-up" style="transition-delay: 300ms;">
+                        <div class="stat-icon">💻</div>
+                        <div class="stat-number"><span class="counter" data-target="6">0</span></div>
+                        <div class="stat-label">App Platforms</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- View Modes Detail -->
+        <section class="view-modes section-padding">
+            <div class="container">
+                <h2 class="section-title text-center" data-animate="fade-up">Browse Your Way</h2>
+                <div class="view-modes-grid mt-4">
+                    <div class="view-mode-card group" data-animate="fade-up">
+                        <div class="view-placeholder glass-card-hover">Grid View Mockup</div>
+                        <h3 class="gradient-hover">Grid View</h3>
+                        <p>Classic tile layout with box art thumbnails</p>
+                    </div>
+                    <div class="view-mode-card group" data-animate="fade-up" style="transition-delay: 100ms;">
+                        <div class="view-placeholder glass-card-hover">List View Mockup</div>
+                        <h3 class="gradient-hover">List View</h3>
+                        <p>Compact list with details at a glance</p>
+                    </div>
+                    <div class="view-mode-card group" data-animate="fade-up" style="transition-delay: 200ms;">
+                        <div class="view-placeholder glass-card-hover">Carousel View Mockup</div>
+                        <h3 class="gradient-hover">Carousel View</h3>
+                        <p>Cinematic 3D carousel with large artwork, immersive browsing experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gamepad & Keyboard -->
+        <section class="controls section-padding dark-surface">
+            <div class="container controls-split">
+                <div class="controls-text" data-animate="fade-right">
+                    <h2 class="section-title">Designed for Controllers</h2>
+                    <p class="mt-2 text-lg secondary-text">Full gamepad navigation with button indicators, plus comprehensive keyboard shortcuts for power users. Navigate your library without ever touching a mouse.</p>
+                </div>
+                <div class="controls-visual" data-animate="fade-left">
+                    <div class="gamepad-art glow-effect">
+                        <div class="dpad"></div>
+                        <div class="action-btns">
+                            <span class="g-btn y-btn">Y</span>
+                            <span class="g-btn x-btn">X</span>
+                            <span class="g-btn b-btn">B</span>
+                            <span class="g-btn a-btn">A</span>
+                        </div>
+                    </div>
+                    <div class="keyboard-shortcuts mt-4">
+                        <div class="k-item"><span class="k-key">V</span><span class="k-label">View</span></div>
+                        <div class="k-item"><span class="k-key">S</span><span class="k-label">Search</span></div>
+                        <div class="k-item"><span class="k-key">R</span><span class="k-label">Random</span></div>
+                        <div class="k-item"><span class="k-key">F</span><span class="k-label">Fullscreen</span></div>
+                        <div class="k-item"><span class="k-key">Q</span><span class="k-label">Quit</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download & Install -->
+        <section class="download section-padding" id="download">
+            <div class="container">
+                <h2 class="section-title text-center" data-animate="fade-up">Get Forsaken</h2>
+                <div class="platform-cards-grid mt-4">
+                    <div class="p-card glass-card" data-animate="fade-up">
+                        <div class="p-icon">🐧</div>
+                        <h3>Linux</h3>
+                        <p>Flatpak (recommended)<br>AppImage (portable)</p>
+                        <button class="btn btn-outline small-btn mt-2 w-full">Download</button>
+                    </div>
+                    <div class="p-card glass-card" data-animate="fade-up" style="transition-delay: 50ms;">
+                        <div class="p-icon">🪟</div>
+                        <h3>Windows</h3>
+                        <p>Build from source (Flutter)</p>
+                        <button class="btn btn-outline small-btn mt-2 w-full">Source</button>
+                    </div>
+                    <div class="p-card glass-card" data-animate="fade-up" style="transition-delay: 100ms;">
+                        <div class="p-icon">🍎</div>
+                        <h3>macOS</h3>
+                        <p>Build from source (Flutter)</p>
+                        <button class="btn btn-outline small-btn mt-2 w-full">Source</button>
+                    </div>
+                    <div class="p-card glass-card" data-animate="fade-up" style="transition-delay: 150ms;">
+                        <div class="p-icon">🤖</div>
+                        <h3>Android</h3>
+                        <p>APK download<br>Build from source</p>
+                        <button class="btn btn-outline small-btn mt-2 w-full">Download</button>
+                    </div>
+                    <div class="p-card glass-card" data-animate="fade-up" style="transition-delay: 200ms;">
+                        <div class="p-icon">📱</div>
+                        <h3>iOS</h3>
+                        <p>Build from source</p>
+                        <button class="btn btn-outline small-btn mt-2 w-full">Source</button>
+                    </div>
+                    <div class="p-card glass-card" data-animate="fade-up" style="transition-delay: 250ms;">
+                        <div class="p-icon">🌐</div>
+                        <h3>Web</h3>
+                        <p>Access directly in browser</p>
+                        <button class="btn btn-outline small-btn mt-2 w-full">Launch</button>
+                    </div>
+                </div>
+                
+                <div class="terminal-box" data-animate="fade-up">
+                    <div class="terminal-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <span class="term-title">Build from Source</span>
+                    </div>
+                    <pre><code><span class="cmd-prompt">$</span> git clone https://github.com/ForsakenStation/ForsakenStation.git
+<span class="cmd-prompt">$</span> cd ForsakenStation
+<span class="cmd-prompt">$</span> fvm flutter pub get
+<span class="cmd-prompt">$</span> fvm flutter run</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source Section -->
+        <section class="open-source section-padding text-center dark-surface">
+            <div class="container">
+                <h2 class="section-title" data-animate="fade-up">Free, Open, Global</h2>
+                <p class="secondary-text mt-2 max-w-lg mx-auto" data-animate="fade-up">Forsaken is proudly open source and localized into 14 languages. Join the community and help build the future of retro gaming.</p>
+                
+                <div class="badges mt-4" data-animate="fade-up">
+                    <span class="badge">MIT License</span>
+                    <span class="badge">Flutter &amp; Dart</span>
+                </div>
+                
+                <div class="language-flags mt-4" data-animate="fade-up">
+                    <span class="flag-pill">English</span>
+                    <span class="flag-pill">Spanish</span>
+                    <span class="flag-pill">Portuguese</span>
+                    <span class="flag-pill">French</span>
+                    <span class="flag-pill">German</span>
+                    <span class="flag-pill">Italian</span>
+                    <span class="flag-pill">Japanese</span>
+                    <span class="flag-pill">Chinese</span>
+                    <span class="flag-pill">Korean</span>
+                    <span class="flag-pill">Arabic</span>
+                    <span class="flag-pill">Russian</span>
+                    <span class="flag-pill">Catalan</span>
+                    <span class="flag-pill">Basque</span>
+                    <span class="flag-pill">Galician</span>
+                </div>
+                
+                <div class="mt-4 pt-2" data-animate="fade-up">
+                    <a href="https://github.com/ForsakenStation/ForsakenStation" class="btn btn-primary" target="_blank">Contribute on GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">FORSAKEN</div>
+                    <p class="secondary-text mt-1">Retro Gaming Frontend</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/ForsakenStation/ForsakenStation" target="_blank">GitHub</a>
+                    <a href="#">License</a>
+                    <a href="#">Documentation</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with Flutter, Dart, and love for retro gaming</p>
+                <p class="legal-text mt-1">Forsaken does not distribute ROMs or copyrighted game files. Users must provide their own legally obtained ROMs.</p>
+                <p class="mt-2 text-sm">&copy; 2026 Forsaken Emulator Contributors</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

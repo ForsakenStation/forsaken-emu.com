@@ -110,14 +110,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!prefersReducedMotion && window.innerWidth > 768) {
         window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
             requestAnimationFrame(() => {
-                const scrolled = window.scrollY;
                 parallaxElements.forEach(el => {
                     const speed = el.getAttribute('data-parallax');
                     const yPos = -(scrolled * speed);
+                    // Use only translateY to avoid conflicts with existing transforms if any
                     el.style.transform = `translateY(${yPos}px)`;
                 });
             });
         });
     }
+
+    // 6. App Preview Thumbnail Click Logic
+    const mainMockupImg = document.querySelector('.mockup-img');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const thumbImg = thumb.querySelector('.thumb-img');
+            if (thumbImg && mainMockupImg) {
+                mainMockupImg.src = thumbImg.src;
+                mainMockupImg.alt = thumbImg.alt;
+                
+                // Active state for thumbnails
+                thumbnails.forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            }
+        });
+    });
+
+    // 7. Fullscreen Image Viewer (Lightbox)
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const zoomableImages = document.querySelectorAll('.mockup-img, .view-img');
+
+    zoomableImages.forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+    };
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    // Escape key to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
 });

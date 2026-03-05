@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="preview-thumbnails">
-                    <div class="thumbnail" data-animate="fade-up">
+                    <div class="thumbnail active" data-animate="fade-up">
                         <img src="assets/images/rom_list_grid.webp" alt="Grid View" class="thumb-img">
                     </div>
                     <div class="thumbnail" data-animate="fade-up" style="transition-delay: 100ms;">
@@ -336,6 +336,14 @@
             </div>
         </section>
     </main>
+
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close View">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
